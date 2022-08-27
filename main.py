@@ -32,9 +32,9 @@ if st.button("Submit"):
     else:
         st.text(f"Risk group: High-risk group")
     if prediction < 0.711:
-        st.markdown(f"Recommendations: Patients in the high-risk group may better be treated with radiotherapy alone, best supportive care, or minimal invasive techniques such as cementoplasty to palliatively alleviate pain since patients might not have enough time to recovery from surgery.")
+        st.markdown(f"Recommendations: Patients in the low-risk group may better be treated with radiotherapy alone, best supportive care, or minimal invasive techniques such as cementoplasty to palliatively alleviate pain since patients might not have enough time to recovery from surgery.")
     else:
-        st.markdown(f"Recommendations: For patients in the low-risk groups, more invasive surgery, such as excisional surgery, and long-course radiotherapy could be recommended, because those patients might suffer from poor quality of life for a very long time if only palliative interventions were performed.")
+        st.markdown(f"Recommendations: For patients in the high-risk groups, more invasive surgery, such as excisional surgery, and long-course radiotherapy could be recommended, because those patients might suffer from poor quality of life for a very long time if only palliative interventions were performed.")
 
 st.subheader('About the model')
 st.markdown('The web calculator was created according the model developed by the random forest approach. Internal validation: AUC: 0.796 (95% CI: 0.746-0.847); accuracy: 0.778. External validation: AUC: 0.748 (95% CI: 0.653-0.843); accuracy: 0.745. Risk stratification: based on the best cut-off value (0.711), patients in the high-risk groups were above two times more likely to suffer from early death than patients in the low-risk groups (P<0.001).')
